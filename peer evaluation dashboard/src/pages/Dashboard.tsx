@@ -6,6 +6,7 @@ import MiniGames from "../components/Gamification/MiniGames";
 import Badges from "../components/Dashboard/Badges";
 import Leaderboard from "../components/Leaderboard/Leaderboard";
 import "./styles.css";
+import StreakCalendar from "../components/Charts/StreakCalender";
 
 const Dashboard = () => {
   return (
@@ -38,6 +39,20 @@ const Dashboard = () => {
       <div className="card">
         <Badges />
         <div className="card-title">Achievement Badges</div>
+      </div>
+      <div>
+        <StreakCalendar
+          streakData={[
+            { date: "2026-03-01", count: 1 },
+            { date: "2026-03-02", count: 3 },
+            { date: "2026-03-03", count: 0 },
+            { date: "2026-03-04", count: 5 },
+            { date: "2026-03-05", count: 2 },
+            { date: "2026-03-06", count: 4 },
+            { date: "2026-03-07", count: 6 },
+          ]}
+        />
+
       </div>
 
       <div className="card leaderboard-full">
